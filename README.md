@@ -1,5 +1,7 @@
 # Deep Learning Based Segmentation of Functional Tissue Units from Histological Stainings
-This is the final project of 02740: Bioimage Informatics at Carnegie Mellon University. Kevin Elaba, Parker Simpson, and Yiqing (Melody) Wang collaboratively contributed to the project. The dataset is provided by [Kaggle](https://kaggle.com/competitions/hubmap-organ-segmentation/).
+This is the final project of 02740: Bioimage Informatics at Carnegie Mellon University. Kevin Elaba, Parker Simpson, and Yiqing (Melody) Wang collaboratively contributed to the project. We explored various deep learning based methods for segmenting out functional tissue units (FTU) from histological stainings in five different tissues: spleen, lung, large intestine, kidney, and prostate. The dataset is provided by [Kaggle](https://kaggle.com/competitions/hubmap-organ-segmentation/).
+
+My personal contribution was building an in-house U-Net model based on the original U-Net architecture. I increased model complexity (for the complex shapes of the FTUs; by increasing the number of layers in the U-Net) but at the same time decrease the number of parameters (for faster compute; by decreasing the number of nodes in each layer). Having limited compute resources, I only trained my models for 20 epochs, but qualitatively, the models are producing resonable predictions of the FTU masks, suggesting that even with just 20 epochs, they are learning patterns and features of the FTU ground truth masks. 
 
 Please refer to [our report](https://github.com/psimps21/02740FinalProject/blob/main/BioimageProjectReport.pdf) for detailed information on the methods and review results.
 
